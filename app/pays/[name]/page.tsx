@@ -17,7 +17,7 @@ export default async function Country({params: {name}}: {params: {name: string}}
             <section className="flex flex-col container">
                 <h1 className="text-5xl font-bold text-center text-gray-800 my-16">{country.translations.fra.common}</h1>
                 <Link className="flex gap-1 py-2 items-center" href="/">
-                    <Image src="/frame.svg" width={24} height={24} alt="fleche pour retour"/>
+                    <Image src="/frame.svg" width={25} height={25} alt="fleche pour retour"/>
                     Voltar</Link>
                 <article className="flex justify-between min-w-full p-10 bg-white rounded-xl ">
                     <section>
