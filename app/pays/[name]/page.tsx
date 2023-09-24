@@ -21,14 +21,18 @@ export default async function Country({params: {name}}: {params: {name: string}}
                     Voltar</Link>
                 <article className="flex justify-between min-w-full p-10 bg-white rounded-xl ">
                     <section>
-                        <h2 className="text-xl text-gray-800"><b >🏙️Capitale:</b> {country.capital}</h2>
-                        <h2 className="text-xl text-gray-800"><b >🗺️Continent:</b> {country.region} - {country.subregion}</h2>
+                        {country.capital && (<h2 className="text-xl text-gray-800"><b >🏙️Capitale:</b> {country.capital}</h2>)}
+                        <h2 className="text-xl text-gray-800"><b >🗺️Continent:</b> {country.region} {country.subregion && ` - ${country.subregion}`}</h2>
                         <h2 className="text-xl text-gray-800"><b >🧑‍🤝‍🧑Population:</b> {formatter.format(country.population)} </h2>
-                        <h2 className="text-xl text-gray-800"><b >🗣️Langue parlée:</b>
-                        <br/>
-                        {Object.values(country.languages).map((language) => (
-                            <span key={language} className="inline-block p-1 mx-0.5 bg-indigo-700 text-white text-sm rounded-full">{language}</span>
-                        ))}</h2> 
+                        {country.languages &&(
+                            <h2 className="text-xl text-gray-800"><b >🗣️Langue parlée:</b>
+                            <br/>
+                            {Object.values(country.languages).map((language) => (
+                                <span key={language} className="inline-block p-1 mx-0.5 bg-indigo-700 text-white text-sm rounded-full">{language}</span>
+                            ))}
+                            </h2>
+                        )  }
+                            
                     </section>
                     <div className="relative h-auto w-96">
                         <Image
@@ -38,6 +42,15 @@ export default async function Country({params: {name}}: {params: {name: string}}
                         />
                     </div>
                 </article>
+
+                <section>
+                    <h3 className='mt-12 text-2xl font-semibold text-gray-800'>
+                        Pays qui font frontiere:
+                    </h3>
+                    <div className="grid grid-cols-5 w-full">
+                        {country.borders.map((border) => <div> {border} </div>)}
+                    </div>
+                </section>
             </section>
         </main>
     )

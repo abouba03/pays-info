@@ -17,11 +17,11 @@ export type Country = {
 
   }
 
-  capital: string;
+  capital?: string;
   region: string;
-  subregion: string;
+  subregion?: string;
   population: number;
-  languages: {
+  languages?: {               //cela signifie que "laguage est optionel, si dans l'API il n'y a pas, alors le code saute cette erreur"
     [key: string]: string; 
   };
 
@@ -49,6 +49,8 @@ export default async function Home() {
               </div>
               <h1 className='font-bold text-xl text-center mt-1'>{country.translations.fra.common}</h1>
             </article>
+
+          
           </Link>
         ))}
       </section>
