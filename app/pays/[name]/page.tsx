@@ -18,7 +18,7 @@ export default async function Country({params: {name}}: {params: {name: string}}
                 <h1 className="text-5xl font-bold text-center text-gray-800 my-16">{country.translations.fra.common}</h1>
                 <Link className="flex gap-1 py-2 items-center" href="/">
                     <Image src="/frame.svg" width={25} height={25} alt="fleche pour retour"/>
-                    Voltar</Link>
+                    Retour</Link>
                 <article className="flex justify-between min-w-full p-10 bg-white rounded-xl ">
                     <section>
                         {country.capital && (<h2 className="text-xl text-gray-800"><b >🏙️Capitale:</b> {country.capital}</h2>)}
