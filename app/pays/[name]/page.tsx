@@ -7,6 +7,13 @@ async function getCountryByName(name: string): Promise<Country> {
     return (await response.json())[0]; //on fait de cette maniere parce que il nous retourn une array
 }
 
+
+async function getCountryBordersByName(name: string ){
+
+
+}
+
+
 export default async function Country({params: {name}}: {params: {name: string}}){
 
     const country = await getCountryByName(name)
