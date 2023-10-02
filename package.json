@@ -1,5 +1,5 @@
 {
-  "name": "pays-info",
+  "name": "lista-de-paises",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,17 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "20.6.3",
-    "@types/react": "18.2.22",
-    "@types/react-dom": "18.2.7",
-    "autoprefixer": "10.4.15",
-    "eslint": "8.49.0",
-    "eslint-config-next": "13.5.1",
-    "next": "13.5.1",
-    "postcss": "8.4.30",
+    "@types/node": "20.3.1",
+    "@types/react": "18.2.13",
+    "@types/react-dom": "18.2.6",
+    "autoprefixer": "10.4.14",
+    "eslint": "8.43.0",
+    "eslint-config-next": "13.4.6",
+    "next": "13.4.6",
+    "postcss": "8.4.24",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tailwindcss": "3.3.3",
-    "typescript": "5.2.2"
+    "tailwindcss": "3.3.2",
+    "typescript": "5.1.3"
   }
 }
